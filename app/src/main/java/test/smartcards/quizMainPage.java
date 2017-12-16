@@ -13,12 +13,13 @@ import java.util.Scanner;
 
 import static test.smartcards.R.id.antwortAnsehenButton;
 import static test.smartcards.R.id.frage;
+import static test.smartcards.R.id.karteiKartenNummer;
 import static test.smartcards.R.id.stapelName;
 
 public class quizMainPage extends AppCompatActivity {
 
     private static ArrayList<String> smartcards;
-    private static int count;
+    private static int count = 0;
     private static String ganzerPfad;
 
     @Override
@@ -49,7 +50,8 @@ public class quizMainPage extends AppCompatActivity {
             try {
                 Scanner scanner = new Scanner(f2);
                 scanner.useDelimiter("\\s*\\|\\s*");
-                smartcards.add(scanner.next() + "|" + scanner.next());
+                String card = scanner.next() + "|" + scanner.next();
+                smartcards.add(card);
                 scanner.close();
                 count++;
             } catch (Exception e) {
@@ -66,10 +68,15 @@ public class quizMainPage extends AppCompatActivity {
         String input = smartcards.get(number);
         Scanner s = new Scanner(input).useDelimiter("\\s*\\|\\s*");
         String question = s.next(); //Frage
-        String answer = s.next();  //Antwort*/
+        String answer = s.next();  //Antwort
+        s.close();
 
         TextView tv_Frage = (TextView) findViewById(frage);//frage ist die ID vom TextView Frage in XML
         tv_Frage.setText(question);
+
+        TextView tv_anzahl = (TextView) findViewById(karteiKartenNummer);//frage ist die ID vom TextView Frage in XML
+        tv_anzahl.setText("noch " + count + " cards");
+        count = 0; //nach der Anzeige der Anzahl der cards muss count wieder auf 0 gesetzt werden
 
         final Button antwortAnsehen = (Button) findViewById(antwortAnsehenButton);
         antwortAnsehen.setOnClickListener(new View.OnClickListener() {

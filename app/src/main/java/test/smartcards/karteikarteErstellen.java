@@ -30,12 +30,12 @@ public class karteikarteErstellen extends AppCompatActivity {
 
 
         //hasExtra() prüft ob der karteikartenErstellenIntent extra Informationen unter dem Namen "STAPELNAME" hat, die wir auslesen können.
-        if (getIntent().hasExtra("test.smartcards.STAPELNAME")){
+
             TextView tv = (TextView) findViewById(R.id.karteikartenName);
             //Die übergebene Information wird in der Variablen title gespeichert
             title = getIntent().getExtras().getString("test.smartcards.STAPELNAME");
             tv.setText("Stapel: " + title);
-        }
+
 
         Button karteikarteSpeichernButton = (Button) findViewById(R.id.karteikarteSpeichernButton);
         karteikarteSpeichernButton.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +45,7 @@ public class karteikarteErstellen extends AppCompatActivity {
                 String frage = vorderseiteEditText.getText().toString();
                 String antwort = rueckseiteEditText.getText().toString();
                 if (vorderseiteEditText.getText().toString().length()>0 && rueckseiteEditText.getText().toString().length()>0){
-                    File karteikarte = new File (filepath + "/" + frage + ".txt");
+                    File karteikarte = new File (filepath + "/" + frage);
                     try {
                         //OutputStream outputStream = new FileOutputStream(karteikarte);
                         //outputStream.write(vorderseiteEditText.toString().getBytes());
