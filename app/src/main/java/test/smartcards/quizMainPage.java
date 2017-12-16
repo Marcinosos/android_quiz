@@ -7,10 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.File;
 
 import static test.smartcards.R.id.antwortAnsehenButton;
 import static test.smartcards.R.id.frage;
@@ -45,14 +44,15 @@ public class quizMainPage extends AppCompatActivity {
         smartcards = new ArrayList<String>();
 
         for(int i = 0; i < ar.length; i++){
-            File f2 = new File(ganzerPfad);
-            Scanner s;
+            File f2 = new File(ganzerPfad + "/" + ar[i]);
+
             try {
-                s = new Scanner(f2).useDelimiter("\\s*\\|\\s*");
-                smartcards.add(s.next() + "|" + s.next());
-                s.close();
+                Scanner scanner = new Scanner(f2);
+                scanner.useDelimiter("\\s*\\|\\s*");
+                smartcards.add(scanner.next() + "|" + scanner.next());
+                scanner.close();
                 count++;
-            } catch (FileNotFoundException e) {
+            } catch (Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
