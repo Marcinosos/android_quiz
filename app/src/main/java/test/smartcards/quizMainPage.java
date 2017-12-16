@@ -58,7 +58,7 @@ public class quizMainPage extends AppCompatActivity {
             }
 
         }
-        /*
+
         // Zufallszahl generieren
         int number = (int)(Math.round((Math.random() * smartcards.size())));
         if(number != 0 && number == smartcards.size())
@@ -69,8 +69,7 @@ public class quizMainPage extends AppCompatActivity {
         String answer = s.next();  //Antwort*/
 
         TextView tv_Frage = (TextView) findViewById(frage);//frage ist die ID vom TextView Frage in XML
-        tv_Frage.setText(ganzerPfad);
-
+        tv_Frage.setText(question);
 
         final Button antwortAnsehen = (Button) findViewById(antwortAnsehenButton);
         antwortAnsehen.setOnClickListener(new View.OnClickListener() {
