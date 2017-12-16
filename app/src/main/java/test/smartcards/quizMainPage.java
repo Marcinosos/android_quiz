@@ -81,7 +81,5 @@ public class quizMainPage extends AppCompatActivity {
         });
 
 
-
-
     }
 }
