@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="test.smartcards">
+    //Rechte für Internet und Speicher
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <intent-filter>
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <activity
+            android:name=".stapelErstellen"
+            android:label="Stapel erstellen" />
+        <activity
+            android:name=".stapelBearbeiten"
+            android:label="Stapel bearbeiten" />
+        <activity
+            android:name=".karteikarteErstellen"
+            android:label="Karteikarten erstellen" />
+        <activity
+            android:name=".stapelUebersicht"
+            android:label="Stapelübersicht" />
+        <activity
+            android:name=".karteikartenUebersicht"
+            android:label="Karteikartenübersicht" />
+        <activity
+            android:name=".lernenActivity"
+            android:label="Lernen" />
+        <activity
+            android:name=".einstellung"
+            android:label="Einstellungen" />
+        //Dropbox AuthActivity
+        <activity
+            android:name=".dropbox"
+            android:configChanges="orientation|keyboard"
+            android:label="Dropbox"
+            android:launchMode="singleTask">
+            <intent-filter>
+                Change this to be db- followed by your app key
+                <data android:scheme="db-qjrd1eu1ewancn0" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".firebase"
+            android:label="Firebase" />
+        <activity
+            android:name=".backup"
+            android:label="Backup erstellen" />
+        <activity
+            android:name=".karteikarteBearbeiten"
+            android:label="Karteikarten bearbeiten" />
+        <activity android:name=".stapelUebersichtQuiz" />
+        <activity android:name=".quizMainPage" >
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".quiz_frage_antwort"></activity>
+    </application>
+
+</manifest>

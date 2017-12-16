@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- An invisible view aligned to the center of the parent. Allows other
+    views to be arranged on either side -->
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/lernenButton"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Lernen" />
+
+    <Button
+        android:id="@+id/stapelUebersichtButton"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:background="@color/colorPrimaryDark"
+        android:text="Stapel-Übersicht" />
+
+    <Button
+        android:id="@+id/stapelErstellenButton"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/lernenButton"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Neuen Stapel erstellen" />
+
+    <Button
+        android:id="@+id/einstellungButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/stapelErstellenButton"
+        android:background="@android:color/holo_green_light"
+        android:text="Einstellungen" />
+
+
+</RelativeLayout>

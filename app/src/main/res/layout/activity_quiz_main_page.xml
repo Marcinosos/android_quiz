@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.smartcards.quizMainPage"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/centerShim"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/stapelName"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/centerShim"
+        android:text="stapelName" />
+
+    <TextView
+        android:id="@+id/karteiKartenNummer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/centerShim"
+        android:text="AnzahlKarteiKarten 1/61" />
+
+    <TextView
+        android:id="@+id/frage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/stapelName"
+        android:text="Frage" />
+
+    <Button
+        android:id="@+id/antwortAnsehenButton"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frage"
+        android:text="Antwort ansehen" />
+</RelativeLayout>

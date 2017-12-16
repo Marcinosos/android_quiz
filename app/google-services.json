@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "820904321558",
+    "firebase_url": "https://smartcards-e7d71.firebaseio.com",
+    "project_id": "smartcards-e7d71",
+    "storage_bucket": "smartcards-e7d71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820904321558:android:fab03a46cb376179",
+        "android_client_info": {
+          "package_name": "test.smartcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820904321558-3109b75ikdqnr22onbi1njdsff3o023m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "test.smartcards",
+            "certificate_hash": "cba5725a9800bdce7a4103096306ae6a85c4e2ea"
+          }
+        },
+        {
+          "client_id": "820904321558-p4fttomct0eu2t8g6abndkrtvdsm6s8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlhskclRRLdwMospJbG5x3ODh5C_s7R28"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820904321558-p4fttomct0eu2t8g6abndkrtvdsm6s8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
